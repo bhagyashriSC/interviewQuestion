@@ -1,0 +1,88 @@
+for(var i=0; i<5; i++){
+  setTimeout(()=> console.log(i), 3000*i)
+} // 5 5 5 5 5
+--------------------------------------------------
+factorial (1*2*3*4*5)
+function factorial(numb){
+    let a = 1;
+  for(var i = 1; i <= numb; i++){     
+    a = a*i;
+  }
+  console.log(a)
+}
+factorial(5); //120
+----------------------------------------------------
+function evenNo(numb){
+   if(numb%2 === 0)
+   console.log("even")
+   else
+   console.log("odd")
+}
+evenNo(12); //even
+---------------------------------------------------------
+function palydome(numb){
+   const rev = (numb.split('').reverse().join(''));
+   if(rev === numb)
+   console.log("palidome");
+   else
+   console.log("not palindomne")
+}
+palydome("112");
+----------------------------------------------------------
+var promise1 = new Promise(function(resolve, reject){
+  let x = 2;
+  let y = 3;
+  if(x===y){
+    resolve();
+  }
+  else{
+    reject();
+  }
+})
+
+promise1.then(function(){
+console.log("resolved");
+}).catch(function(){
+console.log('reject')
+})
+
+--------------------------------------------------------
+
+var numArray = [50,5,80,95,2,4,1];
+for (var i = 0; i < numArray.length; i++) {
+    var target = numArray[i];
+    for (var j = i - 1; j >= 0 && (numArray[j] > target); j--) {
+        numArray[j+1] = numArray[j];
+    }
+    numArray[j+1] = target
+}
+console.log(numArray);
+
+-------------------------------------------------------
+const arr = [
+{"name": "Raj", "age": 20},
+{"name": "Vikash", "age": 22},
+{"name": "Ramesh", "age": 28}
+];
+
+useEffect (()=>
+{
+  fetch('api');
+  .then(responce)
+    responce.ok
+})
+--------------------------------------------------------------
+There was a group of 41 Jewish soldiers surrounded by Roman army, and they didn't want to get caught. So, they sat down in a circle and came up with an algorithm. Everybody had a sword, and starting from person #1 in the circle, everybody will kill the next living person on the left. So, #1 will kill #2. #3 will kill #4, #5 will kill #6 and so on. The last living person will have to commit suicide to avoid getting caught by Romans.
+The soldier called Josephus preferred to be caught over committing suicide. So, in the group of 41 soldiers, he chose the location where he will be the last person living.
+Write a program to figure out, in a group of given N people, where should Josephus sit to live at the end of all internal killing.
+There is a mathematical solution to this problem. But, your program should use the brut force method to find the position. The output of the program may look like this:
+
+Solving Josephus problem for 5 soldiers:
+1 kills 2
+3 kills 4
+5 kills 1
+3 kills 5
+Josephus should sit on position# 3
+Check out more at:
+
+https://www.youtube.com/watch?v=uCsD3ZGzMgE

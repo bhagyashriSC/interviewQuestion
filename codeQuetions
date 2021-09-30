@@ -1,0 +1,158 @@
+
+---------------------------------------------------------
+---------html/css---------------------------------------------
+---------------------------------------------------------
+>> flex properties
+>> transform properties
+>> keyframe
+>> media queries
+>> browswer friendly queries
+>> disply none/ visibility hidden
+>> box model
+>> svg/canvas
+>> api in html
+  https://www.w3schools.com/html/html5_geolocation.asp
+  geolocation
+  deag/drop
+  web storage (local storage/ session storage)
+>> localstorage example
+	// Store
+    localStorage.setItem("lastname", "Smith"); or
+	localStorage.lastname = "Smith";
+	//remove 
+	localStorage.removeItem("lastname");
+>> sessionstorage example
+	// Store
+	sessionStorage.setItem("lastname", "Smith");
+	// read
+	var lastname = sessionStorage.getItem("key");
+	// remove
+	sessionStorage.removeItem("key");
+	//remove all
+	sessionStorage.clear();
+>> how to add source of audio video
+>>
+---------------------------------------------------------
+---------------------------------------------------------
+---------------------------------------------------------
+>> Difference between async/await
+>> Difference between reduce/filter/map
+>> event loop
+>> promise
+>> Write program for digital clock
+>> program for palindrome (eye === eye)
+	var x = 'eye';
+	var y = x.split('').reverse().join('');
+	if(x === y)
+	console.log('This is a palindrome value');
+	o/p 121
+	
+>> setTimeout and setInterval
+>> lifecycle methods 
+>> getDerivedstatromprops
+>> controlled and uncontrolled component
+>> how to validate props
+>> difference between constructor getDerivedstate getinitialstate
+>> virtual DOM
+
+>> setState is asyncronus why?
+  This is because setState alters the state and causes rerendering. 
+  This can be an expensive operation and making it synchronous might leave the browser unresponsive. 
+  Thus the setState calls are asynchronous as well as batched for better UI experience and performance.
+  
+>> Is react synchronous?
+   Short answer to your question is - NO, react doesn't have sync method setState .
+   
+>> debounce and throttle
+   The main difference between throttling and debouncing is that 
+   throttling executes the function at a regular interval, 
+   while debouncing executes the function only after some cooling period.
+   Debouncing and throttling are not something provided by JavaScript itself. 
+   
+   Let’s consider an example of a search bar on a website.
+   Every time you type something in the search bar, it makes an API call to fetch the data from the server on the basis of the letters typed in the search bar.
+
+
+
+
+---------------------------------------------------------
+---------------------------------------------------------
+---------------------------------------------------------
+console.log("One"); 
+setTimeout(() => { console.log("Two"); }, 500); 
+console.log("Three");
+
+output:
+One
+Three
+Two
+---------------------------------------------------------
+---------------------------------------------------------
+---------------------------------------------------------
+let myFirstPromise = new Promise((resolve, reject) => {
+    setTimeout(function(){
+        resolve("Success!"); // fulfilled
+    }, 4000);
+});
+
+myFirstPromise.then((successMessage) => {
+    console.log("Yay! " + successMessage);
+});
+
+o/p
+Yay! Success! 
+
+---------------------------------------------------------
+---------------------------------------------------------
+---------------------------------------------------------
+>> reverse each other word of string //flipkart
+function ReverseString(str) {    
+    const revArray = []; 
+	wordArray = str.split(' ');	
+    const length = wordArray.length;    
+    for(let i = length; i >= 0; i--) { 	
+	if(i%2 != 0 && wordArray[i] !== undefined ){	
+	reverseString = (wordArray[i].split("").reverse().join(""));
+	revArray.push(reverseString); 
+	}
+	else{
+	revArray.push(wordArray[i]);
+	}        
+    }    
+    return revArray.reverse().join(' '); // riversing array and join with spaces
+} 
+document.write(ReverseString("I really dont like revesing strings!")) ;
+
+o/p
+I yllaer dont ekil revesing !sgnirts
+
+---------------------------------------------------------
+---------------------------------------------------------
+---------------------------------------------------------
+
+
+>> max three integer sum
+function maxTriSum(array_values) {  
+ var my_array=array_values;
+    document.getElementById("my_array").innerHTML = my_array; 
+	 var new_array = [];
+	var max = my_array.reduce(function(a, b) {	
+	 for(var i in my_array) { 
+		 let nnn = (Math.max(a, b));		
+			new_array.push(nnn);	
+		}
+		var uniqueArray1 = new Set(new_array);
+		const abc1 = [...uniqueArray1]; 
+	
+		let sum = abc1.flat().reduce((p, c) => p + c, 0);		
+		document.getElementById("result").innerHTML = sum;     
+    return Math.max(a, b);
+	}); 
+}
+ maxTriSum([-7,12,-7,29,-5.0,-7,0,0,29]);
+ 
+ o/p
+ 41
+
+
+ 
