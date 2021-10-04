@@ -86,3 +86,13 @@ Josephus should sit on position# 3
 Check out more at:
 
 https://www.youtube.com/watch?v=uCsD3ZGzMgE
+
+------------------------------------------------------------------------------------
+function sum(a){
+  return (function(b){
+    return (function(c){
+    a+b+c;
+  })
+  })
+}
+sum(1)(2)(3)
