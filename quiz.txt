@@ -47,7 +47,7 @@ console.log('reject')
 })
 
 --------------------------------------------------------
-
+sorting
 var numArray = [50,5,80,95,2,4,1];
 for (var i = 0; i < numArray.length; i++) {
     var target = numArray[i];

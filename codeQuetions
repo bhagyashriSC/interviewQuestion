@@ -8,6 +8,7 @@
 >> media queries
 >> browswer friendly queries
 >> disply none/ visibility hidden
+>> nth child
 >> box model
 >> svg/canvas
 >> api in html
@@ -37,6 +38,7 @@
 ---------------------------------------------------------
 >> Difference between async/await
 >> Difference between reduce/filter/map
+>> Diffrence between forEach and map
 >> event loop
 >> promise
 >> Write program for digital clock
