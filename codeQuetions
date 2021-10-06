@@ -74,6 +74,7 @@
    Let’s consider an example of a search bar on a website.
    Every time you type something in the search bar, it makes an API call to fetch the data from the server on the basis of the letters typed in the search bar.
 
+>> shallocopy deepcopy
 
 
 
