@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <style>
+        body {
+            height: 100vh;
+            color: #fff;
+        }
+
+        #grandparent {
+            background-color: #000;
+            padding: 20px;
+        }
+
+        #parent {
+            background-color: blue;
+            padding: 20px;
+        }
+
+        #child {
+            background-color: brown;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d-flex h-100">
+        <div id="grandparent">
+            click grandparent
+            <div id="parent">
+                click parent
+                <div id="child">
+                    click child
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        //bubbling
+        document.getElementById('grandparent').addEventListener('click', function () {
+            console.log('in grandparent');
+        })
+        document.getElementById('parent').addEventListener('click', function () {
+            console.log('in parent');
+        })
+        document.getElementById('child').addEventListener('click', function () {
+            console.log('in child');
+        })
+         //capturing pass true
+         document.getElementById('grandparent').addEventListener('click', function () {
+            console.log('in grandparent');
+        }, true)
+        document.getElementById('parent').addEventListener('click', function () {
+            console.log('in parent');
+        },true)
+        document.getElementById('child').addEventListener('click', function () {
+            console.log('in child');
+        }, true)
+    </script>
+</body>
+
+</html>
